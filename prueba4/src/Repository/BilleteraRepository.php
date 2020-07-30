@@ -19,6 +19,15 @@ class BilleteraRepository extends ServiceEntityRepository
         parent::__construct($registry, Billetera::class);
     }
 
+    public function ConsultarSaldo(){
+        return $this->getEntityManager()
+        ->createQuery('
+            SELECT saldoActual.saldo
+            FROM App:billetera saldoActual
+        ')
+        ->getResult();
+    }
+
     // /**
     //  * @return Billetera[] Returns an array of Billetera objects
     //  */

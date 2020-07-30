@@ -32,6 +32,11 @@ class Billetera
         return $this->id;
     }
 
+    public function setId(int $id): self
+    {
+        return $this->$id;
+    }
+
     public function getSaldo(): ?float
     {
         return $this->saldo;
@@ -43,4 +48,15 @@ class Billetera
 
         return $this;
     }
+
+    public function getUser(): ?string
+    {
+        return $this->user;
+    }
+
+    public function getDocumento(): ?string
+    {
+        return $this->documento;
+    }
+    
 }
